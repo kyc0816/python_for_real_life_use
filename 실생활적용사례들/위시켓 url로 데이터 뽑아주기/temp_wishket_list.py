@@ -7,6 +7,7 @@
 
 # https://stackoverflow.com/a/65802367 --> # import 빨간줄떠서 커맨드 팔레트(cmd shift P 혹은 fn F1)에서 Developer: Reload Window로 새로고침 해주니 해결됨
 import requests
+from datetime import datetime
 from bs4 import BeautifulSoup
 # https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/
 
@@ -52,7 +53,11 @@ for url in urls:
     print('제목 : ', soup.select('h1.subtitle-1-medium')[0].text) # type: ignore
     print('링크 : ', url)
     print('견적 : ', soup.select('p.project-condition-data')[0].text, ' / 기간 : ', soup.select('p.project-condition-data')[1].text) # type: ignore
-    print('모집 마감일 : ', soup.select('p.condition-data.body-2.text900')[0].text[:13]) # type: ignore
+    
+    date = soup.select('p.condition-data.body-2.text900')[0].text[:13] # type: ignore
+    day_name_eng = datetime(int(date[:4]), int(date[6:8]), int(date[10:12])).strftime("%A")
+    day_name_eng_to_kor_dict = {'Monday' : '월', 'Tuesday' : '화', 'Wednesday' : '수', 'Thursday' : '목', 'Friday' : '금', 'Saturday' : '토', 'Sunday' : '일', }
+    print('모집 마감일 : ', soup.select('p.condition-data.body-2.text900')[0].text[:13], f'({day_name_eng_to_kor_dict[day_name_eng]})') # type: ignore
     skills= []
     for skill in soup.select('div.subcategory-box'):
         skills.append(skill.text) # type: ignore

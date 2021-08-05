@@ -11,8 +11,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 # https://beomi.github.io/2017/01/20/HowToMakeWebCrawler/
 
-urlsMenu = {0: '(예시) 위시켓 첫 10개의 프로젝트들', 1: '210805 배치도 다음 작업 살펴보기'}
-toShow = [0, 1] # urlsMenu 중에서 실제로 선택지로 줄 것들의 번호
+from savedURLs import urlsMenu, toShow
 
 print('\n아래 리스트에서 보고싶은 url 뭉치의 번호를 입력해주세요 (숫자만 입력)\n')
 for key in toShow:
@@ -54,7 +53,9 @@ for url in urls:
     print('링크 : ', url)
     print('견적 : ', soup.select('p.project-condition-data')[0].text, ' / 기간 : ', soup.select('p.project-condition-data')[1].text) # type: ignore
     
+    # 마감일 & 요일 뽑기
     date = soup.select('p.condition-data.body-2.text900')[0].text[:13] # type: ignore
+    # https://stackoverflow.com/questions/8380389/how-to-get-day-name-from-datetime # datetime에서 요일 뽑기
     day_name_eng = datetime(int(date[:4]), int(date[6:8]), int(date[10:12])).strftime("%A")
     day_name_eng_to_kor_dict = {'Monday' : '월', 'Tuesday' : '화', 'Wednesday' : '수', 'Thursday' : '목', 'Friday' : '금', 'Saturday' : '토', 'Sunday' : '일', }
     print('모집 마감일 : ', soup.select('p.condition-data.body-2.text900')[0].text[:13], f'({day_name_eng_to_kor_dict[day_name_eng]})') # type: ignore

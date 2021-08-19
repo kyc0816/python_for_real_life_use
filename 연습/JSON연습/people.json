@@ -1,0 +1,56 @@
+{
+    "alive" : [
+        {
+            "name" : "Kimi Raikkonen",
+            "birth" : 1979,
+            "death" : null,
+            "job" : "F1 Racer",
+            "nationality" : "Finland"
+        },
+        {
+            "name" : "Max Verstappen",
+            "birth" : 1997,
+            "death" : null,
+            "job" : "F1 Racer",
+            "nationality" : "Netherland"
+        },
+        {
+            "name" : "Fernando Alonso",
+            "birth" : 1981,
+            "death" : null,
+            "job" : "F1 Racer",
+            "nationality" : "Spain"
+        }
+
+    ],
+    "dead" : [
+        {
+            "name" : "William Shakespeare",
+            "birth" : 1564,
+            "death" : 1616,
+            "job" : "Playwriter",
+            "nationality" : "England"
+        },
+        {
+            "name" : "Martin Luther King",
+            "birth" : 1929,
+            "death" : 1968,
+            "job" : "Preacher",
+            "nationality" : "US"
+        },
+        {
+            "name" : "Niki Lauda",
+            "birth" : 1949,
+            "death" : 2019,
+            "job" : "F1 Racer",
+            "nationality" : "Austria"
+        },
+        {
+            "name" : "Ayrton Senna",
+            "birth" : 1960,
+            "death" : 1994,
+            "job" : "F1 Racer",
+            "nationality" : "Brazil"
+        }
+    ]
+}

@@ -8,7 +8,7 @@ datesCombinations = dateGenerator.datesCombinations
 
 stringToWrite = ''
 for dateComb in datesCombinations:
-    stringToWrite += first + dateComb[0] + '/' + dateComb[1] + '\n'
+    stringToWrite += first + dateComb[0] + '/' + dateComb[1] + last + '\n'
 f = open(f'./evetywhereURLs.txt', 'w')
 f.write(stringToWrite)
 f.close()

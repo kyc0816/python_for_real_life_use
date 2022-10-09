@@ -3,13 +3,13 @@
 # # source ../../venv/bin/activate 해서 venv 켠 뒤
 # # python skyscanner.py 해서 실행
 
-# from datesGenerator import dataGenerator
+# from Dates.datesGenerator import dateGenerator
 # from savedUrls import urlFirst, urlLast
 # from cities import cities
 # import webbrowser
 
-# dataGenerator = dataGenerator()
-# datesCombinations = dataGenerator.datesCombinations
+# dateGenerator = dateGenerator()
+# datesCombinations = dateGenerator.datesCombinations
 
 # # FINAL (도시 1개, 날짜 20개, 한 창에 10개씩)
 

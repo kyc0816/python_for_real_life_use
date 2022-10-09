@@ -2,13 +2,13 @@
 # source ../../venv/bin/activate 해서 venv 켠 뒤
 # python temp_skyscanner.py 해서 실행
 
-from datesGenerator import dataGenerator
+from Dates.datesGenerator import dateGenerator
 from savedUrls import urlFirst, urlLast
 from cities import cities
 import webbrowser
 
-dataGenerator = dataGenerator()
-datesCombinations = dataGenerator.datesCombinations
+dateGenerator = dateGenerator()
+datesCombinations = dateGenerator.datesCombinations
 
 # # 1 - requests 사용 - 실패 (한 번에 불러올 수 있는 구조가 아니고, 억지로 nest로 불러오려하면 5XX 에러 뜸.)
 # response = requests.get('https://www.skyscanner.co.kr/transport/flights/icn/pari/221020/221121/?adults=1&adultsv2=1&cabinclass=economy&children=0&childrenv2=&destinationentityid=27539733&inboundaltsenabled=false&infants=0&originentityid=27538638&outboundaltsenabled=false&preferdirects=false&ref=home&rtn=1')

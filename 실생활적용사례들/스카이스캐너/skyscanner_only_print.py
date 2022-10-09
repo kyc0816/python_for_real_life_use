@@ -2,13 +2,13 @@
 # source ../../venv/bin/activate 해서 venv 켠 뒤
 # python skyscanner_only_print.py 해서 실행
 
-from datesGenerator import dataGenerator
+from Dates.datesGenerator import dateGenerator
 from savedUrls import urlFirst, urlLast
 from cities import cities
 import webbrowser
 
-dataGenerator = dataGenerator()
-datesCombinations = dataGenerator.datesCombinations
+dateGenerator = dateGenerator()
+datesCombinations = dateGenerator.datesCombinations
 
 def writeURLsFile(cityName, numDates):
     stringToWrite = ""

@@ -2,13 +2,13 @@
 # source ../../venv/bin/activate 해서 venv 켠 뒤
 # python temp_skyscanner.py 해서 실행
 
-from datesGenerator import dataGenerator
+from Dates.datesGenerator import dateGenerator
 from savedUrls import urlFirst, urlLast
 from cities import cities
 import webbrowser
 
-dataGenerator = dataGenerator()
-datesCombinations = dataGenerator.datesCombinations
+dateGenerator = dateGenerator()
+datesCombinations = dateGenerator.datesCombinations
 
 # 단건 조회 - example
 import subprocess

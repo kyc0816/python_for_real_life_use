@@ -40,6 +40,16 @@ for i in range(len(refinedAllDates)-30):
     for j in range(i+30, 92):
         datesCombinationsOneMonth.append([startDate, refinedAllDates[j]])
 
+# 6 (Added 14~45 days)
+datesCombinationsBetween14And45 = []
+for i in range(len(refinedAllDates)-14):
+    startDate = refinedAllDates[i]
+    for j in range(i+14, i+45):
+        if j == 92:
+            break
+        datesCombinationsBetween14And45.append([startDate, refinedAllDates[j]])
+
 class dateGenerator():
     datesCombinations = datesCombinations
     datesCombinationsOneMonth = datesCombinationsOneMonth
+    datesCombinationsBetween14And45 = datesCombinationsBetween14And45

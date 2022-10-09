@@ -33,5 +33,13 @@ for i in range(len(refinedAllDates)-14):
 # print(datesCombinations) # -> static/datesCombinations.py
 # print(len(datesCombinations)) # -> 3081    ==>    < (221014+221028~230113) ~ (221230+230113) > = 1+2+3+ ... + 78 = (78*79)/2 = 39*79 = (40-1)*(80-1) = 3200 - 120 + 1 = 3081 (correct!)
 
+# 5 (Added One Month +)
+datesCombinationsOneMonth = []
+for i in range(len(refinedAllDates)-30):
+    startDate = refinedAllDates[i]
+    for j in range(i+30, 92):
+        datesCombinationsOneMonth.append([startDate, refinedAllDates[j]])
+
 class dateGenerator():
     datesCombinations = datesCombinations
+    datesCombinationsOneMonth = datesCombinationsOneMonth

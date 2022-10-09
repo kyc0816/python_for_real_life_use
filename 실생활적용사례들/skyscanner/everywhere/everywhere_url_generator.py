@@ -5,10 +5,18 @@ last = '/?adultsv2=1&cabinclass=economy&childrenv2=&inboundaltsenabled=false&out
 
 dateGenerator = dateGenerator()
 datesCombinations = dateGenerator.datesCombinations
+datesCombinationsOneMonth = dateGenerator.datesCombinationsOneMonth
+
+# stringToWrite = ''
+# for dateComb in datesCombinations:
+#     stringToWrite += first + dateComb[0] + '/' + dateComb[1] + last + '\n'
+# f = open(f'./evetywhereURLs.txt', 'w')
+# f.write(stringToWrite)
+# f.close()
 
 stringToWrite = ''
-for dateComb in datesCombinations:
+for dateComb in datesCombinationsOneMonth:
     stringToWrite += first + dateComb[0] + '/' + dateComb[1] + last + '\n'
-f = open(f'./evetywhereURLs.txt', 'w')
+f = open(f'./evetywhereOneMonthURLs.txt', 'w')
 f.write(stringToWrite)
 f.close()
